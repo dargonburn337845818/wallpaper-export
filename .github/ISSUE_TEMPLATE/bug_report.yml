@@ -1,0 +1,39 @@
+name: Bug report
+description: 报告可复现的问题，请勿包含本地路径或敏感信息
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: 版本
+      description: WallpaperExport 版本或构建来源
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: 1. 运行... 2. 输入... 3. 报错...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望行为
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际行为
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 隐私检查
+      description: 请确认没有包含本地路径或其他敏感信息。
+      options:
+        - label: 我已确认未包含本地路径、账号信息或录制内容。
+          required: true
