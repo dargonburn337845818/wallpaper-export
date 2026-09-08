@@ -1,0 +1,20 @@
+# 由 gh-automation 生成；ghp.py 读取本文件。
+# 注意：GitHub 上暂无该远端仓库，需先建仓（gh repo create）。
+repo: wallpaper-export
+local_dir: wallpaper-export
+default_branch: main
+version_source: VERSION#version
+build: python3 -m py_compile export_we_wallpaper.py
+artifacts:
+- export_we_wallpaper.py
+checks:
+- privacy
+- style
+ci_required: false
+release:
+  enabled: true
+  tag_prefix: v
+allow_dirty: false
+timeout_seconds: 120
+retries: 2
+note: 远端仓库尚未在 GitHub 创建；建仓后 git push -u origin main 即可接入管道
